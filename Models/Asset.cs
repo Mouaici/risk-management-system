@@ -1,0 +1,28 @@
+﻿namespace RiskManagement.Models
+{
+    public class Asset
+    {
+        public int Id { get; set; }
+
+        public int OrganizationId { get; set; }
+
+        public required string Name { get; set; } = null!;
+
+        public string? Definition { get; set; }
+
+        public required string AssetType { get; set; }
+
+        public string? Classification { get; set; }
+
+        public required string Status { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+
+        public DateTime UpdatedAt { get; set; }
+
+        // Navigation property
+
+        public Organization Organization { get; set; } = null!;
+
+    }
+}
